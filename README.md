@@ -2,6 +2,7 @@
 
 Пример:
 
+```php
 require '..\vendor\autoload.php';
 
 use Sitemap\Sitemap;
@@ -51,30 +52,33 @@ $pages = [
 ];
 
 
-$filePath = '..\public\sitemap\sitemap.csv';
+$filePath = '..\public\hh\aa\sitemap.csv';
+$csv = (new FileTypesFactory())->make(FileTypesEnum::CSV->value);
 
 try {
-    $generator = new Sitemap($pages, (new FileTypesFactory())->make(FileTypesEnum::CSV->value), $filePath);
+    $generator = new Sitemap($pages, $csv, $filePath);
     echo "Sitemap generated successfully!";
 } catch (InvalidDataException $e) {
     echo "Error: " . $e->getMessage();
 }
 
 
-$filePath = '..\public\sitemap\sitemap.xml';
+$filePath = '..\public\hh\aa\sitemap.xml';
+$xml = (new FileTypesFactory())->make(FileTypesEnum::XML->value);
 
 try {
-    $generator = new Sitemap($pages, (new FileTypesFactory())->make(FileTypesEnum::XML->value), $filePath);
+    $generator = new Sitemap($pages, $xml, $filePath);
     echo "Sitemap generated successfully!";
 } catch (InvalidDataException $e) {
     echo "Error: " . $e->getMessage();
 }
 
 
-$filePath = '..\public\sitemap\sitemap.json';
+$filePath = '..\public\hh\aa\sitemap.json';
+$json = (new FileTypesFactory())->make(FileTypesEnum::JSON->value);
 
 try {
-    $generator = new Sitemap($pages, (new FileTypesFactory())->make(FileTypesEnum::JSON->value), $filePath);
+    $generator = new Sitemap($pages, $json, $filePath);
     echo "Sitemap generated successfully!";
 } catch (InvalidDataException $e) {
     echo "Error: " . $e->getMessage();
