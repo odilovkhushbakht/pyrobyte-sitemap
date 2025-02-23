@@ -1,5 +1,7 @@
 # pyrobyte-task
 
+Установка: composer require pyrobyte/sitemap
+
 Пример:
 
 ```php
