@@ -1,0 +1,19 @@
+{
+    "name": "pyrobyte/sitemap",
+    "description": "pyrobyte task",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sitemap\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "khushbakht"
+        }
+    ],
+    "require": {
+         "php": "^8.2"
+    }
+}
